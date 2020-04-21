@@ -10,7 +10,7 @@ module.exports = {
                 data.email,
                 data.name,
                 data.last_name,
-                data.address,
+                data.adress,
                 data.phone,
                 data.id_rol,
                 data.id_city

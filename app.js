@@ -4,11 +4,13 @@ const bodyParser = require("body-parser");
 const app = express();
 const productRouter = require("./api/product/product.router");
 const userRouter = require("./api/user/user.router");
+const orderRouter = require("./api/order/order.router");
 
 app.use(bodyParser.json());
 
 app.use("/api/product", productRouter);
 app.use("/api/user", userRouter);
+app.use("/api/order", orderRouter);
 
 app.get("/api", (req, res) => {
     res.json({

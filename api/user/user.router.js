@@ -5,7 +5,7 @@ const { checkToken, checkUserIsAdmin, checkUserHasAccess} = require("../../middl
 router
     .post("/", controller.createUser)
     .get("/", checkUserIsAdmin, controller.getAllUsers)
-    .get("/id/",checkUserHasAccess, controller.getUserbyID)
-    .post("/login/", controller.login);
+    .get("/id",checkUserHasAccess, controller.getUserbyID)
+    .post("/login", controller.login);
 
 module.exports = router;
