@@ -64,7 +64,7 @@ module.exports = {
     },
     getAllOrders: (callBack) => {
         pool.query(
-            `SELECT o.id_order, o.time, s.descrip, p.descrip, u.username, u.adress FROM \`order\` o JOIN order_state s ON o.id_state=s.id_state JOIN payment p ON o.id_payment=p.id_payment JOIN user u ON o.id_user=u.id_user ORDER BY o.time`,
+            `SELECT o.id_order, o.time, s.descrip, p.descrip, u.username, u.address FROM \`order\` o JOIN order_state s ON o.id_state=s.id_state JOIN payment p ON o.id_payment=p.id_payment JOIN user u ON o.id_user=u.id_user ORDER BY o.time`,
             [],
             (error, results, fields) => {
                 if (error) {

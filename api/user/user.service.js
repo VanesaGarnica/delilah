@@ -10,7 +10,7 @@ module.exports = {
                 data.email,
                 data.name,
                 data.last_name,
-                data.adress,
+                data.address,
                 data.phone,
                 data.id_rol,
                 data.id_city
@@ -25,7 +25,7 @@ module.exports = {
     },
     getAllUsers: (callBack) => {
         pool.query(
-            `SELECT id_user, username, email, \`user\`.name, last_name, adress, phone, \`rol\`.descrip rol, \`city\`.name city FROM \`user\` JOIN \`rol\` ON \`user\`.id_rol=\`rol\`.id_rol JOIN \`city\` ON \`user\`.id_city=\`city\`.id_city`,
+            `SELECT id_user, username, email, \`user\`.name, last_name, address, phone, \`rol\`.descrip rol, \`city\`.name city FROM \`user\` JOIN \`rol\` ON \`user\`.id_rol=\`rol\`.id_rol JOIN \`city\` ON \`user\`.id_city=\`city\`.id_city`,
             [],
             (error, results, fields) => {
                 if (error) {
@@ -37,7 +37,7 @@ module.exports = {
     },
     getUserByID: (data, callBack) => {
         pool.query(
-            `SELECT id_user, username, email, \`user\`.name, last_name, adress, phone, \`rol\`.descrip rol, \`city\`.name city FROM \`user\` JOIN \`rol\` ON \`user\`.id_rol=\`rol\`.id_rol JOIN \`city\` ON \`user\`.id_city=\`city\`.id_city WHERE id_user=?`,
+            `SELECT id_user, username, email, \`user\`.name, last_name, address, phone, \`rol\`.descrip rol, \`city\`.name city FROM \`user\` JOIN \`rol\` ON \`user\`.id_rol=\`rol\`.id_rol JOIN \`city\` ON \`user\`.id_city=\`city\`.id_city WHERE id_user=?`,
             [
                 data.id_user
             ],

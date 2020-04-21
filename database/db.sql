@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `delilah`.`User` (
   `email` VARCHAR(45) NOT NULL,
   `name` VARCHAR(60) NOT NULL,
   `last_name` VARCHAR(60) NOT NULL,
-  `adress` VARCHAR(100) NOT NULL,
+  `address` VARCHAR(100) NOT NULL,
   `phone` VARCHAR(45) NOT NULL,
   `id_rol` INT NOT NULL,
   `id_city` INT NOT NULL,
@@ -255,8 +255,8 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `delilah`;
-INSERT INTO `delilah`.`User` (`id_user`, `username`,`email`,`token`,`password`, `name`, `last_name`, `adress`, `phone`, `id_rol`, `id_city`) VALUES (1, 'juancho', 'juan@gmail.com', null, '1234', 'Juan', 'Perez', 'Gallardo Comun 1963', '383 555 9953', 1, 3);
-INSERT INTO `delilah`.`User` (`id_user`, `username`,`email`,`token`,`password`, `name`, `last_name`, `adress`, `phone`, `id_rol`, `id_city`) VALUES (2, 'josepepe', 'jose@gmail.com', null, '1234','Jose', 'Gomez', 'Av. de las Riveras 17653 2B', '351 666 7893', 2, 1);
+INSERT INTO `delilah`.`User` (`id_user`, `username`,`email`,`token`,`password`, `name`, `last_name`, `address`, `phone`, `id_rol`, `id_city`) VALUES (1, 'juancho', 'juan@gmail.com', null, '1234', 'Juan', 'Perez', 'Gallardo Comun 1963', '383 555 9953', 1, 3);
+INSERT INTO `delilah`.`User` (`id_user`, `username`,`email`,`token`,`password`, `name`, `last_name`, `address`, `phone`, `id_rol`, `id_city`) VALUES (2, 'josepepe', 'jose@gmail.com', null, '1234','Jose', 'Gomez', 'Av. de las Riveras 17653 2B', '351 666 7893', 2, 1);
 
 COMMIT;
 
