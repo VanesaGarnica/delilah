@@ -21,7 +21,11 @@ Descargar o clonar el contenido del repositorio
 
 ### 2. instalacion de dependencias
 
-Desde la linea de comandos situada en la carpeta del proyecto, correr "npm install" para instalar todas las dependencias necesarias.
+Desde la linea de comandos situada en la carpeta del proyecto, correr el comando
+
+```npm i bcrypt body-parser dotenv express jsonwebtoken mysql2 nodemon```
+
+para instalar todas las dependencias necesarias.
 
 ### 3. crear la base de datos
 
@@ -39,6 +43,18 @@ DB_USER=[usuario configurado en su servidor de base de datos, se puede usar root
 DB_PASS=[contraseña de dicho usuario]
 MYSQL_DB=delilah[es el nombre de la base de datos que descargó, no debería cambiarse]
 JWT_SECRET=[la secret que se usara para generar los jsonwebtoken para el login]
+```
+
+ejemplo
+
+```
+APP_PORT=3000
+DB_PORT=3306
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=root1234
+MYSQL_DB=delilah
+JWT_SECRET=secret
 ```
 
 ### 5. correr la aplicacion
