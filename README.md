@@ -14,9 +14,13 @@ Instrucciones para utilizar el contenido del repositorio localmente:
 ### 1. paso previo
 
 Tener instalado Node.js
+
 Tener instalado Postman o similar para hacer las peticiones HTTP.
+
 Tener instalado un IDE (recomendado Visual Studio Code).
+
 Disponer un gestor de bases de datos MySQL (recomendado MySQL Workbench)
+
 Descargar o clonar el contenido del repositorio
 
 ### 2. instalacion de dependencias
@@ -33,7 +37,7 @@ El archivo "db.sql" que se encuentra en la carpeta "database" contiene el script
 
 ### 4. configurar las variables de entorno
 
-Crear un archivo de texto llamado ".env" en la carpeta descargada, que deberá tener el siguiente formato, sin []:
+La carpeta descargada del repositorio incluye  un archivo de texto llamado ".env" en el que están configuradas las variables de entorno para la conexión con la base de datos. Las mismas deberán ser reemplazadas por las propias, de la siguiente manera:
 
 ```
 APP_PORT=[puerto que usara la aplicación del servidor de la api]
@@ -52,7 +56,7 @@ APP_PORT=3000
 DB_PORT=3306
 DB_HOST=localhost
 DB_USER=root
-DB_PASS=root1234
+DB_PASS=1234
 MYSQL_DB=delilah
 JWT_SECRET=secret
 ```
